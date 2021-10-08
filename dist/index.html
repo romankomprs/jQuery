@@ -5,11 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="/functions.0c1b446b.js"></script>
-</head>
+    <link rel="stylesheet" href="/custom.18d3a4a7.css">
+<script src="/custom.18d3a4a7.js"></script></head>
 <body>
-    <h1>Test jquery</h1>
-    <p>click at me</p>
-    <script>console.log("hello");</script>
+    <div class="container">
+
+    
+        <h1>Test jquery</h1>
+        <p>click at me</p>
+
+        <button class="ajaxButton">
+            Click me to load ajax data
+        </button>
+
+        <button class="buttonLoadAjax">Load ajax</button>
+        <div id="ajaxResponse"></div>
+
+        <a href="https://www.youtube.com/watch?v=1nxSE0R27Gg">Install bootstrap with parcel 2021 jun 3</a>
+
+        <p>Bootstrap 5. It no longer depends on jQuery, https://v5.getbootstrap.com</p>
+        <p>npm install bootstrap</p>
+        <a href="https://stackoverflow.com/questions/22792254/how-do-i-load-bootstrap-using-npm">https://stackoverflow.com/questions/22792254/how-do-i-load-bootstrap-using-npm</a>
+
+
+        <a href="https://youtu.be/1nxSE0R27Gg?t=921">Carry on with this Bootstrap tutorial</a>
+
+
+
+        <script>$("button.buttonLoadAjax").click(function () {
+  // Assign handlers immediately after making the request,
+  // and remember the jqXHR object for this request
+  var jqxhr = $.ajax("https://jsonplaceholder.typicode.com/todos/1").done(function (data) {
+    console.log(data); // alert( "success" );
+  }).fail(function () {
+    alert("error");
+  }).always(function () {
+    alert("complete");
+  }); // Perform other work here ...
+  // Set another completion function for the request above
+  // jqxhr.always(function() {
+  // alert( "second complete" );
+  // });
+});</script>
+
+        <script src="/src.e31bb0bc.js"></script>
+    </div>
 
 
 </body>
